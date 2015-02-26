@@ -6,7 +6,10 @@ class PagesController extends AppController {
 
     public $uses = array();
 
-    public function display() {
+    public function index() {
+        $this->loadModel('Usuario');     
+        $this->set('usuarios', $this->Usuario->find('all'));
+        
         
     }
 
